@@ -21,17 +21,14 @@ public class Practical_2_3 {
             arr[i]=sc.nextInt();
         }
 
-        if(array_front9(arr)==true) //FUNCTION CALL
-        System.out.println("One of the first four element in the array is 9");
-        else
-        System.out.println("One of the first four element in the array is not 9");
+        System.out.println("One of the first four element in the array "+ (array_front9(arr) ? "is 9" : "is not 9") );
 
         System.out.println();
         System.out.println("This Practical is made by 23CS069-Megh Patel");
     }
     public static boolean array_front9(int arr[]) //FUNCTION
     {
-        for(int i=0;i<4;i++)
+        for(int i=0;i< ((arr.length<4) ? arr.length : 4) ;i++)
         {
             if(arr[i]==9)
             return true;
